@@ -71,3 +71,20 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+@layer components {
+  .auth-input {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    outline: none;
+  }
+  .auth-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 18%, transparent);
+  }
+}
