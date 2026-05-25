@@ -55,18 +55,18 @@ function Nav() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <a
-            href="https://webmail.deewhy.ng"
+          <Link
+            to="/login"
             className="hidden text-sm font-medium text-muted-foreground px-3 sm:inline"
           >
-            Webmail Login
-          </a>
-          <a
-            href="#contact"
+            Sign in
+          </Link>
+          <Link
+            to="/signup"
             className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-transform hover:bg-primary-light active:scale-[0.98]"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
