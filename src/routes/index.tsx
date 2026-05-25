@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import webmailImg from "@/assets/webmail.jpg";
 import controlPanelImg from "@/assets/controlpanel.jpg";
+import adminLoginImg from "@/assets/admin-login.jpg";
+import createAccountImg from "@/assets/create-account.jpg";
+import adminUsersImg from "@/assets/admin-users.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -452,6 +455,7 @@ function Index() {
         <Hero />
         <Features />
         <HowItWorks />
+        <Screenshots />
         <Pricing />
         <Contact />
       </main>
