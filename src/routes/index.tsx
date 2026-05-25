@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import webmailImg from "@/assets/webmail.jpg";
 import controlPanelImg from "@/assets/controlpanel.jpg";
+import adminLoginImg from "@/assets/admin-login.jpg";
+import createAccountImg from "@/assets/create-account.jpg";
+import adminUsersImg from "@/assets/admin-users.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -444,6 +447,40 @@ function Footer() {
   );
 }
 
+function Screenshots() {
+  const shots = [
+    { src: adminLoginImg, title: "Secure admin sign-in", body: "Authorized access only — admins sign in to manage every mailbox on your domain." },
+    { src: createAccountImg, title: "Spin up new mailboxes", body: "Create staff accounts instantly: name, password, and a branded @yourcompany.com address." },
+    { src: adminUsersImg, title: "Manage admin team", body: "Add or remove fellow admins, reset passwords, and keep control of who runs your mail system." },
+  ];
+  return (
+    <section className="bg-surface-muted py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-16 max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground">A look inside the control panel</h2>
+          <p className="mt-4 text-muted-foreground">Every screen built for clarity. Manage mailboxes, admins and access from one place.</p>
+        </div>
+        <div className="grid gap-8 lg:grid-cols-3">
+          {shots.map((s) => (
+            <figure key={s.title} className="flex flex-col">
+              <img
+                src={s.src}
+                alt={s.title}
+                loading="lazy"
+                className="aspect-[4/3] w-full rounded-xl object-cover bg-surface ring-1 ring-black/5 outline-1 -outline-offset-1 outline-black/5"
+              />
+              <figcaption className="mt-5">
+                <h3 className="text-base font-medium text-foreground">{s.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground text-pretty">{s.body}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -452,6 +489,7 @@ function Index() {
         <Hero />
         <Features />
         <HowItWorks />
+        <Screenshots />
         <Pricing />
         <Contact />
       </main>
