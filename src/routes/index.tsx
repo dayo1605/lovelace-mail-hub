@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import webmailImg from "@/assets/webmail.jpg";
 import controlPanelImg from "@/assets/controlpanel.jpg";
 import adminLoginImg from "@/assets/admin-login.jpg";
@@ -55,18 +55,18 @@ function Nav() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <a
-            href="https://webmail.deewhy.ng"
+          <Link
+            to="/login"
             className="hidden text-sm font-medium text-muted-foreground px-3 sm:inline"
           >
-            Webmail Login
-          </a>
-          <a
-            href="#contact"
+            Sign in
+          </Link>
+          <Link
+            to="/signup"
             className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-transform hover:bg-primary-light active:scale-[0.98]"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
@@ -88,13 +88,13 @@ function Hero() {
               with Roundcube webmail built in.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              <Link
+                to="/signup"
                 className="inline-flex items-center rounded-md bg-primary py-2 pr-4 pl-3 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-transform hover:bg-primary-light active:scale-[0.98]"
               >
                 <div className="mr-2 size-4 shrink-0 rounded-full border border-white/20 bg-white/10" />
                 Claim your domain
-              </a>
+              </Link>
               <a
                 href="#how-it-works"
                 className="inline-flex items-center rounded-md bg-surface py-2 px-4 text-sm font-medium text-foreground ring-1 ring-border transition-transform hover:bg-surface-muted active:scale-[0.98]"
