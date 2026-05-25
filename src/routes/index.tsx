@@ -88,13 +88,13 @@ function Hero() {
               with Roundcube webmail built in.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              <Link
+                to="/signup"
                 className="inline-flex items-center rounded-md bg-primary py-2 pr-4 pl-3 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-transform hover:bg-primary-light active:scale-[0.98]"
               >
                 <div className="mr-2 size-4 shrink-0 rounded-full border border-white/20 bg-white/10" />
                 Claim your domain
-              </a>
+              </Link>
               <a
                 href="#how-it-works"
                 className="inline-flex items-center rounded-md bg-surface py-2 px-4 text-sm font-medium text-foreground ring-1 ring-border transition-transform hover:bg-surface-muted active:scale-[0.98]"
