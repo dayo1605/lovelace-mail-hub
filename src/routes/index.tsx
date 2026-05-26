@@ -33,6 +33,14 @@ function Logo() {
   );
 }
 
+function ComingSoonBanner() {
+  return (
+    <div className="bg-primary text-primary-foreground text-center text-xs sm:text-sm font-medium py-2 px-4">
+      🚀 Coming Soon — we're putting the finishing touches on deewhy.ng. Stay tuned!
+    </div>
+  );
+}
+
 function Nav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
@@ -484,6 +492,7 @@ function Screenshots() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ComingSoonBanner />
       <Nav />
       <main>
         <Hero />
